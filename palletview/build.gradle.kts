@@ -42,24 +42,41 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 }
 
-afterEvaluate {
-    extensions.getByType(PublishingExtension::class.java).publications {
-        // Create a Maven publication named "release".
-        create("release", MavenPublication::class.java) {
-            // Explicitly specify the AAR file to publish
-            artifact("$buildDir/outputs/aar/${project.name}-release.aar")
+publishing {
+    publications {
+        register<MavenPublication>("release") {
+            groupId = "com.github.chinhdl891"  // Replace with your GitHub username
+            artifactId = "Color-Picker"        // The repository name
+            version = "1.0.0"                  // Update version as needed
 
-            groupId = "com.github.chinchin"
-            artifactId = "palletview"
-            version = "1.0"
-        }
-    }
+            afterEvaluate {
+                from(components["release"])
+            }
 
-    // Repositories for publishing
-    extensions.getByType(PublishingExtension::class.java).repositories {
-        maven {
-            name = "jitpack"
-            url = uri("https://jitpack.io")
+            pom {
+                name.set("Color Picker Library")
+                description.set("A library for color picking")
+                url.set("https://github.com/chinhdl891/Color-Picker")
+
+                licenses {
+                    license {
+                        name.set("The Apache License, Version 2.0")
+                        url.set("http://www.apache.org/licenses/LICENSE-2.0.txt")
+                    }
+                }
+                developers {
+                    developer {
+                        id.set("chinhdl891")
+                        name.set("Chin Chin")
+                        email.set("vuquocchinh891@gmail.com")
+                    }
+                }
+                scm {
+                    connection.set("scm:git:https://github.com/chinhdl891/Color-Picker.git")
+                    developerConnection.set("scm:git:ssh://github.com/chinhdl891/Color-Picker.git")
+                    url.set("https://github.com/chinhdl891/Color-Picker")
+                }
+            }
         }
     }
 }
