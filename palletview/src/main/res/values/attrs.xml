@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ImageGridView">
+        <attr name="cellX" format="integer" />
+        <attr name="cellY" format="integer" />
+        <attr name="backgroundImage" format="reference" />
+        <attr name="sizeStokeChoose" format="float" />
+    </declare-styleable>
+</resources>
