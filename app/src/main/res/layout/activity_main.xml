@@ -15,6 +15,7 @@
 
     <com.chinchin.palletview.PalletColor
         android:id="@+id/imageGridView"
+        android:layout_marginHorizontal="16dp"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:backgroundImage="@drawable/my_image"
@@ -26,6 +27,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:sizeStokeChoose="3" />
+
+
+    <SeekBar
+        android:visibility="gone"
+        android:id="@+id/customSeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/custom_seekbar_progress"
+        android:max="100"
+        android:progress="100"
+        android:progressDrawable="@drawable/custom_transparent"
+        android:thumb="@drawable/custom_thumb"
+        app:layout_constraintTop_toBottomOf="@+id/imageGridView" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
