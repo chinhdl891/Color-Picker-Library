@@ -46,7 +46,7 @@ publishing {
     publications {
         register<MavenPublication>("release") {
             groupId = "com.github.chinhdl891"  // Replace with your GitHub username
-            artifactId = "Color-Picker"        // The repository name
+            artifactId = "Color-Picker-Library"        // The repository name
             version = "1.0.0"                  // Update version as needed
 
             afterEvaluate {
@@ -56,7 +56,7 @@ publishing {
             pom {
                 name.set("Color Picker Library")
                 description.set("A library for color picking")
-                url.set("https://github.com/chinhdl891/Color-Picker")
+                url.set("https://github.com/chinhdl891/Color-Picker-Library")
 
                 licenses {
                     license {
@@ -72,9 +72,9 @@ publishing {
                     }
                 }
                 scm {
-                    connection.set("scm:git:https://github.com/chinhdl891/Color-Picker.git")
-                    developerConnection.set("scm:git:ssh://github.com/chinhdl891/Color-Picker.git")
-                    url.set("https://github.com/chinhdl891/Color-Picker")
+                    connection.set("scm:git:https://github.com/chinhdl891/Color-Picker-Library.git")
+                    developerConnection.set("scm:git:ssh://github.com/chinhdl891/Color-Picker-Library.git")
+                    url.set("https://github.com/chinhdl891/Color-Picker-Library")
                 }
             }
         }
