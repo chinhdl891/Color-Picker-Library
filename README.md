@@ -1,6 +1,43 @@
-### `PalletColor` - GitHub Tutorial and Usage
+### `PalletColor` - GitHub Setup, Tutorial, and Usage
 
 `PalletColor` is a custom Android View that provides a color palette for users to select colors interactively. It works by displaying a grid of color cells, and users can click on any cell to select the corresponding color. The class supports drawing custom background images, tracking user clicks, and notifying listeners when a color is selected.
+
+---
+
+### Setup
+
+To integrate the `PalletColor` library into your project, follow these steps:
+
+#### Step 1: Add the JitPack repository to your build file
+
+Add the JitPack repository in your root `build.gradle` or `settings.gradle` file under `dependencyResolutionManagement`.
+
+```groovy
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
+
+#### Step 2: Add the dependency
+
+In your module's `build.gradle` file, add the following dependency:
+
+```groovy
+dependencies {
+    implementation 'com.github.chinhdl891:Color-Picker-Library:1.0.1'
+}
+```
+
+### Demo
+
+Here is a demonstration of how the library works:
+
+ ![](https://github.com/chinhdl891/Color-Picker-Library/blob/master/demo.gif)
+
 
 ### Features:
 - **Interactive Color Selection**: Users can select colors by tapping on cells in a grid.
@@ -11,8 +48,6 @@
 ---
 
 ### Installation
-
-To use `PalletColor`, follow these steps:
 
 1. **Add the class to your project**: Copy the `PalletColor.kt` file into your Android project.
 
@@ -28,6 +63,8 @@ To use `PalletColor`, follow these steps:
     app:backgroundImage="@drawable/color_palette_image"
     app:sizeStokeChoose="3" />
 ```
+
+---
 
 ### Usage
 
@@ -73,6 +110,8 @@ palletView.setColorPickerLister(object : ColorPickerListener {
 })
 ```
 
+---
+
 ### Customization
 
 You can customize various aspects of the `PalletColor` view:
@@ -98,6 +137,8 @@ You can customize various aspects of the `PalletColor` view:
    ```xml
    app:sizeStokeChoose="3"
    ```
+
+---
 
 ### Key Methods
 
@@ -154,6 +195,8 @@ class MainActivity : AppCompatActivity() {
     }
 }
 ```
+
+---
 
 ### Conclusion
 
