@@ -10,12 +10,14 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.chinchin.palletview.PalletColor
+import com.chinchin.palletview.SpectrumColor
 
 class MainActivity : AppCompatActivity() {
     private var currentColor = 0x00FFFFFF
     private var currentProgress = 100
     private lateinit var backgroundSelect: View
     private lateinit var palletView: PalletColor
+    private lateinit var spectrumColor: SpectrumColor
     private lateinit var seekBar: SeekBar
 
     @SuppressLint("MissingInflatedId")
@@ -31,6 +33,7 @@ class MainActivity : AppCompatActivity() {
 
         backgroundSelect = findViewById<View>(R.id.bg_choose)
         palletView = findViewById<PalletColor>(R.id.imageGridView)
+        spectrumColor = findViewById<SpectrumColor>(R.id.spectrumColorView)
         seekBar = findViewById<SeekBar>(R.id.customSeekBar)
 
         seekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
@@ -54,6 +57,17 @@ class MainActivity : AppCompatActivity() {
         palletView.setColorPickerLister(object : com.chinchin.palletview.ColorPickerListener {
             override fun onColorSelect(colorHex: String, colorInt: Int) {
               backgroundSelect.setBackgroundColor(colorInt)
+                currentColor = colorInt
+                seekBar.background = createGradientDrawable(endColor = colorInt)
+                updateBackground()
+                seekBar.visibility = View.VISIBLE
+            }
+        })
+
+
+        spectrumColor.setColorPickerLister(object : com.chinchin.palletview.ColorPickerListener {
+            override fun onColorSelect(colorHex: String, colorInt: Int) {
+                backgroundSelect.setBackgroundColor(colorInt)
                 currentColor = colorInt
                 seekBar.background = createGradientDrawable(endColor = colorInt)
                 updateBackground()

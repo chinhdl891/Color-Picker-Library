@@ -6,4 +6,8 @@
         <attr name="backgroundImage" format="reference" />
         <attr name="sizeStokeChoose" format="float" />
     </declare-styleable>
+
+    <declare-styleable name="MovableCircleView">
+        <attr name="viewBackgroundDrawable" format="reference"/>
+    </declare-styleable>
 </resources>
