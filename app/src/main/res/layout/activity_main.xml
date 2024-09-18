@@ -13,21 +13,21 @@
         android:layout_height="50dp"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.chinchin.palletview.PalletColor
-        android:id="@+id/imageGridView"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginHorizontal="16dp"
-        android:visibility="invisible"
-        app:backgroundImage="@drawable/grid_background"
-        app:cellX="12"
-        app:cellY="9"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintDimensionRatio="h,313:212"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:sizeStokeChoose="3" />
+<!--    <com.chinchin.palletview.PalletColor-->
+<!--        android:id="@+id/imageGridView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_marginHorizontal="16dp"-->
+<!--        android:visibility="invisible"-->
+<!--        app:backgroundImage="@drawable/grid_background"-->
+<!--        app:cellX="12"-->
+<!--        app:cellY="9"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintDimensionRatio="h,313:212"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:sizeStokeChoose="3" />-->
 
 
     <com.chinchin.palletview.SpectrumColor
@@ -54,7 +54,9 @@
         android:progressDrawable="@drawable/custom_transparent"
         android:thumb="@drawable/custom_thumb"
         android:visibility="gone"
-        app:layout_constraintTop_toBottomOf="@+id/imageGridView" />
+        app:layout_constraintTop_toBottomOf="@+id/spectrumColorView" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

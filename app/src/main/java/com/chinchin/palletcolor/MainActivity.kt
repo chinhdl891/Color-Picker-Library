@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         backgroundSelect = findViewById<View>(R.id.bg_choose)
-        palletView = findViewById<PalletColor>(R.id.imageGridView)
+//        palletView = findViewById<PalletColor>(R.id.imageGridView)
         spectrumColor = findViewById<SpectrumColor>(R.id.spectrumColorView)
         seekBar = findViewById<SeekBar>(R.id.customSeekBar)
 
@@ -54,16 +54,16 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
-        palletView.setColorPickerLister(object : com.chinchin.palletview.ColorPickerListener {
-            override fun onColorSelect(colorHex: String, colorInt: Int) {
-              backgroundSelect.setBackgroundColor(colorInt)
-                currentColor = colorInt
-                seekBar.background = createGradientDrawable(endColor = colorInt)
-                updateBackground()
-                seekBar.visibility = View.VISIBLE
-            }
-        })
-
+//        palletView.setColorPickerLister(object : com.chinchin.palletview.ColorPickerListener {
+//            override fun onColorSelect(colorHex: String, colorInt: Int) {
+//              backgroundSelect.setBackgroundColor(colorInt)
+//                currentColor = colorInt
+//                seekBar.background = createGradientDrawable(endColor = colorInt)
+//                updateBackground()
+//                seekBar.visibility = View.VISIBLE
+//            }
+//        })
+//
 
         spectrumColor.setColorPickerLister(object : com.chinchin.palletview.ColorPickerListener {
             override fun onColorSelect(colorHex: String, colorInt: Int) {
